@@ -1,0 +1,21 @@
+@use "../global" as g;
+
+.p-header {
+  width: 100%;
+  height: inherit;
+}
+
+.p-header__inner {
+}
+
+.p-header__logo {
+  margin-top: 20px;
+  a {
+    display: inline-block;
+    width: 175px;
+    img {
+    }
+  }
+}
+
+

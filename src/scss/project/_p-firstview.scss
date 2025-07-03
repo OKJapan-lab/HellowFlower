@@ -1,0 +1,58 @@
+@use "../global" as g;
+
+.p-firstview {
+}
+
+.p-firstview__inner {
+}
+
+.p-firstview__container2 {
+  overflow: hidden;
+  @include g.mq(lg,xl,xxl) {
+    height: 680px;
+  }
+}
+
+.p-firstview__container {
+  overflow: hidden;
+  width: 100vw;
+  height: 600px;
+}
+.p-firstview__imgs {
+  position: relative;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  @include g.mq(xs, sm, md) {
+    width: 300vw;
+    transform: translateX(-100vw);
+  }
+}
+
+.p-firstview__img {
+  overflow: hidden;
+  @include g.mq(xs, sm, md) {
+    width: 100vw;
+  }
+  @include g.mq(lg, xl, xxl) {
+    width: 33.3%;
+  }
+  img {
+    position: relative;
+    @include g.mq(xs, sm, md) {
+      width: 400px;
+      height: 600px;
+    }
+  }
+  &:nth-child(1),
+  &:nth-child(3) {
+    z-index: 1;
+  }
+}
+
+.p-firstview__title {
+  position: relative;
+  padding-top: 10px;
+  background-color: #050507;
+  z-index: 1;
+}

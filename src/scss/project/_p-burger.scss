@@ -1,0 +1,52 @@
+@use "../global" as g;
+
+.p-burger {
+  width: 100%;
+  height: inherit;
+}
+
+.p-burger__inner {
+}
+
+.p-burger__bars {
+  position: relative;
+  margin-top: 28.5px;
+  margin-left: auto;
+  width: 30px;
+  height: 23px;
+  display: flex;
+  flex-direction: column;
+  &.is-checked {
+    .p-burger__bar {
+      background-color: #ffffff;
+      &:nth-of-type(1) {
+        top: 12.75px;
+        transform: rotate(45deg);
+      }
+      &:nth-of-type(2) {
+        display: none;
+      }
+      &:nth-of-type(3) {
+        top: 12.75px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.p-burger__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #121212;
+  transition: transform 0.3s linear, top 0.3s linear;
+
+  &:nth-of-type(2) {
+    top: 10px;
+  }
+  &:nth-of-type(3) {
+    top: 22px;
+  }
+}

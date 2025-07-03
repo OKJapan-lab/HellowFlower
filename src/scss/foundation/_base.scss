@@ -1,0 +1,36 @@
+@use "../global" as g;
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  // 以下で右側のスクロールバーが１つになる
+  line-height: 1.5;
+
+  //----- フォントのデフォルト-----
+  font-family: "Source Sans 3", sans-serif;
+
+  font-size: 18px;
+  font-weight: 300;
+  color: #FFFFFF;
+
+  // フォントサイズを自動調整しない
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; /* Safari */
+
+  background-color: #050507;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+*:focus {
+  outline-color: var(--cl-base);
+}
