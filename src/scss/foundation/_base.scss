@@ -5,14 +5,12 @@ body {
   margin: 0;
   padding: 0;
 
-  // 以下で右側のスクロールバーが１つになる
-  line-height: 1.5;
-
   //----- フォントのデフォルト-----
   font-family: "Source Sans 3", sans-serif;
 
   font-size: 18px;
   font-weight: 300;
+  line-height: normal;
   color: #FFFFFF;
 
   // フォントサイズを自動調整しない

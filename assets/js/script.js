@@ -67,26 +67,26 @@ jQuery(window).on("scroll", function () {
 jQuery(window).on("scroll", function () {
   var scrollY = jQuery(this).scrollTop();
   if (jQuery(window).width() < 900) {
-    var transrate = Math.min(100, scrollY / 10); // スクロール1000pxで scale 1.5
-    jQuery(".p-firstview__img.img1").css(
+    var transrate = Math.min(100, scrollY / 15); 
+    jQuery(".p-firstview__img-container.img1").css(
       "transform",
       "translateX(" + transrate + "%)"
     );
-    jQuery(".p-firstview__img.img1 img").css(
+    jQuery(".p-firstview__img-container.img1 .p-firstview__img").css(
       "transform",
       "translateX(" + transrate + "%)"
     );
-    jQuery(".p-firstview__img.img3").css(
+    jQuery(".p-firstview__img-container.img3").css(
       "transform",
       "translateX(-" + transrate + "%)"
     );
-    jQuery(".p-firstview__img.img3 img").css(
+    jQuery(".p-firstview__img-container.img3 .p-firstview__img").css(
       "transform",
       "translateX(-" + transrate + "%)"
     );
-    // jQuery(".p-firstview__img img").css("transform", "scale(" + scale2 + ")");
+
   } else {
-    var scale = Math.min(1.5, 1 + scrollY / 1000); // スクロール1000pxで scale 1.5
-    jQuery(".p-firstview__container").css("transform", "scale(" + scale + ")");
+    var scale = Math.min(2, 1 + scrollY / 1000); // スクロール1000pxで scale 1.5
+    jQuery(".p-firstview__container-scale").css("transform", "scale(" + scale + ")");
   }
 });
