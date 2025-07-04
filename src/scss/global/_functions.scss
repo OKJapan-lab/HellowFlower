@@ -1,10 +1,6 @@
-// @use "valiables" as global;
-
-// @function vwpix_sp($pixel) {
-// 	@return calc($pixel * 100vw / global.$sm-width);
-// }
-
-// @function vwpix_pc($pixel) {
-// 	@return calc($pixel * 100vw / global.$xl-width);
-// }
-
+@function clampFontSize($min, $max) {
+    $slope: ($max - $min) / (1440 - 375); // 単位：px / px → unitless（vwあたりのpx増加量）
+    $intercept: $min - $slope * 375; // px単位
+    @return clamp(#{$min}px, calc(#{$slope * 100}vw + #{$intercept}px), #{$max}px);
+  }
+  
