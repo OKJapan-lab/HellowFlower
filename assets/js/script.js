@@ -90,3 +90,32 @@ jQuery(window).on("scroll", function () {
     jQuery(".p-firstview__container-scale").css("transform", "scale(" + scale + ")");
   }
 });
+
+
+// img等を下から出現させる
+// 動きのきっかけとなるアニメーションの名前を定義
+function fadeAnime() {
+  // ふわっ
+  jQuery(".js-fadeUpTrigger").each(function () {
+    //fadeUpTriggerというクラス名が
+    var elemPos = jQuery(this).offset().top + 0; //要素より、0px上の
+    var scroll = jQuery(window).scrollTop();
+    var windowHeight = jQuery(window).height();
+    if (scroll >= elemPos - windowHeight) {
+      jQuery(this).addClass("c-fadeUp"); // 画面内に入ったらfadeUpというクラス名を追記
+    } else {
+      jQuery(this).removeClass("c-fadeUp"); // 画面外に出たらfadeUpというクラス名を外す
+    }
+  });
+}
+
+
+// 画面が読み込まれたらすぐに動かしたい場合の記述
+jQuery(window).on("load", function () {
+  fadeAnime(); /* アニメーション用の関数を呼ぶ*/
+}); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+// 画面をスクロールをしたら動かしたい場合の記述
+jQuery(window).scroll(function () {
+  fadeAnime(); /* アニメーション用の関数を呼ぶ*/
+}); // ここまで画面をスクロールをしたら動かしたい場合の記述

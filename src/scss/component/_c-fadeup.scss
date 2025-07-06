@@ -1,0 +1,19 @@
+.js-fadeUpTrigger{
+  transform: translateY(100px);
+}
+
+.c-fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

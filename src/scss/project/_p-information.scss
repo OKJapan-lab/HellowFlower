@@ -1,0 +1,33 @@
+@use "../global" as g;
+
+.p-information {
+  margin-top: 25px;
+  padding-top: 25px;
+}
+
+.p-information__inner {
+}
+
+.p-information__title {
+}
+
+.p-information__en,
+.p-information__jp {
+  font-size: g.clampFontSize(16, 18);
+  text-align: center;
+}
+
+.p-information__en {
+  margin-top: 45px;
+}
+
+.p-information__place {
+  margin-top: 20px;
+  font-size: g.clampFontSize(32, 40);
+  font-weight: 400;
+  text-align: center;
+}
+
+.p-information__jp {
+  margin-top: 20px;
+}

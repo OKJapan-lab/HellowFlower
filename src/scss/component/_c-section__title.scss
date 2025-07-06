@@ -1,6 +1,7 @@
+@use "../global" as g;
+
 .c-section__title {
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 61.2px; /* 170% */
+  font-size: g.clampFontSize(32, 60);
+  letter-spacing: 0.96px;
   text-align: center;
 }

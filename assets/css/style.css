@@ -239,9 +239,8 @@ a {
 }
 
 .c-section__title {
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 61.2px; /* 170% */
+  font-size: clamp(32px, 2.6291079812vw + 22.1408450704px, 60px);
+  letter-spacing: 0.96px;
   text-align: center;
 }
 
@@ -263,6 +262,24 @@ a {
   transition: opacity 0.6s linear;
 }
 
+.js-fadeUpTrigger {
+  transform: translateY(100px);
+}
+
+.c-fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .p-header {
   width: 100%;
   height: inherit;
@@ -398,4 +415,30 @@ a {
   .p-firstview__title {
     margin-top: 40px;
   }
+}
+
+.p-information {
+  margin-top: 25px;
+  padding-top: 25px;
+}
+
+.p-information__en,
+.p-information__jp {
+  font-size: clamp(16px, 0.1877934272vw + 15.2957746479px, 18px);
+  text-align: center;
+}
+
+.p-information__en {
+  margin-top: 45px;
+}
+
+.p-information__place {
+  margin-top: 20px;
+  font-size: clamp(32px, 0.7511737089vw + 29.1830985915px, 40px);
+  font-weight: 400;
+  text-align: center;
+}
+
+.p-information__jp {
+  margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */
