@@ -239,9 +239,13 @@ a {
 }
 
 .c-section__title {
+  text-align: center;
+}
+.c-section__title h2 {
+  display: inline-block;
   font-size: clamp(32px, 2.6291079812vw + 22.1408450704px, 60px);
   letter-spacing: 0.96px;
-  text-align: center;
+  border-bottom: solid 1px #ffffff;
 }
 
 .c-drawer-back {
@@ -264,6 +268,7 @@ a {
 
 .js-fadeUpTrigger {
   transform: translateY(100px);
+  opacity: 0;
 }
 
 .c-fadeUp {
@@ -275,11 +280,23 @@ a {
 @keyframes fadeUpAnime {
   from {
     transform: translateY(100px);
+    opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
   }
 }
+.c-button {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.c-button button {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
 .p-header {
   width: 100%;
   height: inherit;
@@ -441,4 +458,91 @@ a {
 
 .p-information__jp {
   margin-top: 20px;
+}
+
+.p-gallery {
+  padding-top: 80px;
+}
+
+.p-gallery__inner {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: min(100vw, 800px);
+}
+
+.p-gallery__img {
+  width: min(100%, 355px);
+}
+.p-gallery__img:first-child {
+  margin-top: 40px;
+}
+.p-gallery__img:not(:first-child) {
+  margin-top: 30px;
+}
+@media screen and (max-width: 1220px) and (min-width: calc(899px + 1px)), screen and (max-width: 1440px) and (min-width: calc(1220px + 1px)), screen and (min-width: 1441px) {
+  .p-gallery__img:not(:first-child) {
+    margin-top: 60px;
+  }
+}
+.p-gallery__img:nth-child(2n) {
+  margin-left: auto;
+}
+
+.p-access {
+  position: relative;
+  padding-top: 280px;
+  padding-bottom: 280px;
+}
+@media screen and (max-width: 1220px) and (min-width: calc(899px + 1px)), screen and (max-width: 1440px) and (min-width: calc(1220px + 1px)), screen and (min-width: 1441px) {
+  .p-access {
+    padding-top: 600px;
+    padding-bottom: 480px;
+  }
+}
+.p-access::before {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 880px;
+  background-image: url(../img/access-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1173.3333333333px 880px;
+  z-index: -1;
+}
+
+.p-access__building {
+  margin-top: 45px;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--ffffff-white, #fff);
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.p-access__address {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15.5px;
+}
+
+.p-access__tel-mail {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15.5px;
+}
+
+.p-access__button {
+  margin-top: 30px;
+  width: 252px;
+  height: 50px;
+  border: 1px solid #ffffff;
+}
+.p-access__button button {
+  height: inherit;
+  line-height: 50px;
 }/*# sourceMappingURL=style.css.map */

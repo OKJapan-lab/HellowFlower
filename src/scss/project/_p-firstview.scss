@@ -62,7 +62,7 @@
   height: inherit;
   @include g.mq(xs, sm, md) {
     width: calc(400 / 375 * 100vw);
-    transform: translateX(-25/375/2 * 100vw);
+    transform: translateX(calc(-25/375/2 * 100vw));
   }
 }
 
@@ -76,6 +76,5 @@
   letter-spacing: 1.44px;
   @include g.mq(lg, xl, xxl) {
     margin-top: 40px;
-    // font-size: 100px;
   }
 }

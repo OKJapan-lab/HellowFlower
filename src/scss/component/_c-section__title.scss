@@ -1,7 +1,11 @@
 @use "../global" as g;
 
 .c-section__title {
-  font-size: g.clampFontSize(32, 60);
-  letter-spacing: 0.96px;
   text-align: center;
+  h2 {
+    display: inline-block;
+    font-size: g.clampFontSize(32, 60);
+    letter-spacing: 0.96px;
+    border-bottom: solid 1px #ffffff;
+  }
 }

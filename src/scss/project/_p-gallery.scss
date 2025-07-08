@@ -1,0 +1,35 @@
+@use "../global" as g;
+
+.p-gallery {
+  padding-top: 80px;
+}
+
+.p-gallery__inner {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: min(100vw, 355px + 385px + 30px *2);
+}
+
+.p-gallery__title {
+}
+
+.p-gallery__imgs {
+}
+
+.p-gallery__img {
+  width: min(100%, 355px);
+  &:first-child {
+    margin-top: 40px;
+  }
+  &:not(:first-child) {
+    margin-top: 30px;
+    @include g.mq(lg,xl,xxl) {
+        margin-top: 60px;
+    }
+  }
+  &:nth-child(2n) {
+    margin-left: auto;
+  }
+}
