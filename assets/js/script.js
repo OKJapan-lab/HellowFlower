@@ -67,7 +67,7 @@ jQuery(window).on("scroll", function () {
 jQuery(window).on("scroll", function () {
   var scrollY = jQuery(this).scrollTop();
   if (jQuery(window).width() < 900) {
-    var transrate = Math.min(100, scrollY / 15); 
+    var transrate = Math.min(100, scrollY / 15);
     jQuery(".p-firstview__img-container.img1").css(
       "transform",
       "translateX(" + transrate + "%)"
@@ -84,13 +84,14 @@ jQuery(window).on("scroll", function () {
       "transform",
       "translateX(-" + transrate + "%)"
     );
-
   } else {
     var scale = Math.min(2, 1 + scrollY / 1000); // スクロール1000pxで scale 1.5
-    jQuery(".p-firstview__container-scale").css("transform", "scale(" + scale + ")");
+    jQuery(".p-firstview__container-scale").css(
+      "transform",
+      "scale(" + scale + ")"
+    );
   }
 });
-
 
 // img等を下から出現させる
 // 動きのきっかけとなるアニメーションの名前を定義
@@ -109,7 +110,6 @@ function fadeAnime() {
   });
 }
 
-
 // 画面が読み込まれたらすぐに動かしたい場合の記述
 jQuery(window).on("load", function () {
   fadeAnime(); /* アニメーション用の関数を呼ぶ*/
@@ -118,4 +118,39 @@ jQuery(window).on("load", function () {
 // 画面をスクロールをしたら動かしたい場合の記述
 jQuery(window).scroll(function () {
   fadeAnime(); /* アニメーション用の関数を呼ぶ*/
+}); // ここまで画面をスクロールをしたら動かしたい場合の記述
+
+// img等を下から出現させる
+// 動きのきっかけとなるアニメーションの名前を定義
+function fadeInOutAnimeJS() {
+  jQuery(".js-fadeInOutTrigger").each(function () {
+    var $this = jQuery(this);
+    var elemTop = $this.offset().top;
+    var elemBottom = elemTop + $this.outerHeight();
+    var scroll = jQuery(window).scrollTop();
+    var windowBottom = scroll + jQuery(window).height();
+
+    // 300px早くフェードアウト
+    if (elemBottom - 300 > scroll && elemTop < windowBottom) {
+      // 要素が画面内にあるとき
+      jQuery(".p-access__background-img")
+        .addClass("c-fadeIn")
+        .removeClass("c-fadeOut");
+    } else {
+      // 上にも下にも画面外にあるとき
+      jQuery(".p-access__background-img")
+        .addClass("c-fadeOut")
+        .removeClass("c-fadeIn");
+    }
+  });
+}
+
+// 画面が読み込まれたらすぐに動かしたい場合の記述
+jQuery(window).on("load", function () {
+  fadeInOutAnimeJS(); /* アニメーション用の関数を呼ぶ*/
+}); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+// 画面をスクロールをしたら動かしたい場合の記述
+jQuery(window).scroll(function () {
+  fadeInOutAnimeJS(); /* アニメーション用の関数を呼ぶ*/
 }); // ここまで画面をスクロールをしたら動かしたい場合の記述

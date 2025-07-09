@@ -1,0 +1,34 @@
+.p-access__background-img {
+  opacity: 0;
+}
+
+.c-fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.c-fadeOut {
+  animation-name: fadeOutAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnime {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
