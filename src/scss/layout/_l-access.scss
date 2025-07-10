@@ -1,4 +1,5 @@
+@use "../global" as g;
 .l-access {
     position: relative;
-    z-index: 1;
+    z-index: map-get(g.$df-layer, access);
 }
