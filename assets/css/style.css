@@ -114,6 +114,8 @@ a {
 }
 
 .l-burger {
+  opacity: 0;
+  transition: opacity 1s ease;
   position: fixed;
   top: 0;
   left: 0;
@@ -297,49 +299,8 @@ a {
     opacity: 1;
   }
 }
-.p-access__background-img {
-  opacity: 0;
-}
-
-.js-fadeInTrigger {
-  opacity: 0;
-}
-
-.c-fadeIn {
-  animation-name: fadeInAnime;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.c-fadeOut {
-  animation-name: fadeOutAnime;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnime {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeOutAnime {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-.js-fadeInTrigger {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
 .c-opacity__1 {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .c-button {
@@ -593,6 +554,8 @@ a {
 }
 
 .p-access__background-img {
+  opacity: 0;
+  transition: opacity 1s ease;
   position: fixed;
   content: "";
   top: 0;
@@ -607,6 +570,7 @@ a {
 }
 
 .p-contact {
+  padding-top: 100px;
   padding-bottom: 200px;
 }
 

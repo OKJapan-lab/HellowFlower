@@ -120,47 +120,11 @@ jQuery(window).scroll(function () {
   fadeAnime(); /* アニメーション用の関数を呼ぶ*/
 }); // ここまで画面をスクロールをしたら動かしたい場合の記述
 
-// 動きのきっかけとなるアニメーションの名前を定義
-function fadeInOutAnimeJS() {
-  jQuery(".js-fadeInOutTrigger").each(function () {
-    var $this = jQuery(this);
-    var elemTop = $this.offset().top;
-    var elemBottom = elemTop + $this.outerHeight();
-    var scroll = jQuery(window).scrollTop();
-    var windowBottom = scroll + jQuery(window).height();
-
-    // 300px早くフェードアウト
-    if (elemBottom - 300 > scroll && elemTop < windowBottom) {
-      // 要素が画面内にあるとき
-      jQuery(".p-access__background-img")
-        .addClass("c-fadeIn")
-        .removeClass("c-fadeOut");
-    } else {
-      // 上にも下にも画面外にあるとき
-      jQuery(".p-access__background-img")
-        .addClass("c-fadeOut")
-        .removeClass("c-fadeIn");
-    }
-  });
-}
-
-// 画面が読み込まれたらすぐに動かしたい場合の記述
-jQuery(window).on("load", function () {
-  fadeInOutAnimeJS(); /* アニメーション用の関数を呼ぶ*/
-}); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
-
-// 画面をスクロールをしたら動かしたい場合の記述
-jQuery(window).scroll(function () {
-  fadeInOutAnimeJS(); /* アニメーション用の関数を呼ぶ*/
-}); // ここまで画面をスクロールをしたら動かしたい場合の記述
 
 function fadeInAnime() {
-  // ふわっ
   jQuery(".js-fadeInTrigger").each(function () {
     //fadeInTriggerというクラス名が
-    var elemPos = jQuery(this).offset().top + 0; //要素より、0px上の
     var scroll = jQuery(window).scrollTop();
-    var windowHeight = jQuery(window).height();
     if (scroll >= 500) {
       jQuery(this).addClass("c-opacity__1");
     } else {
@@ -169,12 +133,31 @@ function fadeInAnime() {
   });
 }
 
-// 画面が読み込まれたらすぐに動かしたい場合の記述
-jQuery(window).on("load", function () {
-  fadeInAnime(); /* アニメーション用の関数を呼ぶ*/
-}); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
-
 // 画面をスクロールをしたら動かしたい場合の記述
 jQuery(window).scroll(function () {
   fadeInAnime(); /* アニメーション用の関数を呼ぶ*/
+}); // ここまで画面をスクロールをしたら動かしたい場合の記述
+
+function fadeInOutAnime2() {
+  jQuery(".js-fadeInOutTrigger2").each(function () {
+    var $this = jQuery(this);
+    var elemTop = $this.offset().top;
+    var elemBottom = elemTop + $this.outerHeight();
+    var scroll = jQuery(window).scrollTop();
+    var windowBottom = scroll + jQuery(window).height();
+
+    // elemBottom - xxx早くフェードアウト
+    if (elemBottom - 600 > scroll && elemTop + 200 < windowBottom) {
+      // 要素が画面内にあるとき
+      jQuery(".p-access__background-img").addClass("c-opacity__1");
+    } else {
+      // 上にも下にも画面外にあるとき
+      jQuery(".p-access__background-img").removeClass("c-opacity__1");
+    }
+  });
+}
+
+// 画面をスクロールをしたら動かしたい場合の記述
+jQuery(window).scroll(function () {
+  fadeInOutAnime2(); /* アニメーション用の関数を呼ぶ*/
 }); // ここまで画面をスクロールをしたら動かしたい場合の記述

@@ -1,7 +1,8 @@
 @use "../global" as g;
 
 .p-contact {
-    padding-bottom: 200px;  
+  padding-top: 100px;
+  padding-bottom: 200px;
 }
 
 .p-contact__inner {
@@ -19,7 +20,7 @@
   width: 315px;
   height: 80px;
   border: 1px solid #7d7d7d;
-  @include g.mq(lg,xl,xxl) {
+  @include g.mq(lg, xl, xxl) {
     width: 400px;
   }
   button {

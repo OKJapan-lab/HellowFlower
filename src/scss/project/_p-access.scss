@@ -56,6 +56,8 @@
 }
 
 .p-access__background-img {
+  opacity: 0;
+  transition: opacity 1s ease;
   position: fixed;
   content: "";
   top: 0;
