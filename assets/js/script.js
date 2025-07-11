@@ -120,7 +120,6 @@ jQuery(window).scroll(function () {
   fadeAnime(); /* アニメーション用の関数を呼ぶ*/
 }); // ここまで画面をスクロールをしたら動かしたい場合の記述
 
-// img等を下から出現させる
 // 動きのきっかけとなるアニメーションの名前を定義
 function fadeInOutAnimeJS() {
   jQuery(".js-fadeInOutTrigger").each(function () {
@@ -153,4 +152,29 @@ jQuery(window).on("load", function () {
 // 画面をスクロールをしたら動かしたい場合の記述
 jQuery(window).scroll(function () {
   fadeInOutAnimeJS(); /* アニメーション用の関数を呼ぶ*/
+}); // ここまで画面をスクロールをしたら動かしたい場合の記述
+
+function fadeInAnime() {
+  // ふわっ
+  jQuery(".js-fadeInTrigger").each(function () {
+    //fadeInTriggerというクラス名が
+    var elemPos = jQuery(this).offset().top + 0; //要素より、0px上の
+    var scroll = jQuery(window).scrollTop();
+    var windowHeight = jQuery(window).height();
+    if (scroll >= 500) {
+      jQuery(this).addClass("c-opacity__1");
+    } else {
+      jQuery(this).removeClass("c-opacity__1");
+    }
+  });
+}
+
+// 画面が読み込まれたらすぐに動かしたい場合の記述
+jQuery(window).on("load", function () {
+  fadeInAnime(); /* アニメーション用の関数を呼ぶ*/
+}); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+// 画面をスクロールをしたら動かしたい場合の記述
+jQuery(window).scroll(function () {
+  fadeInAnime(); /* アニメーション用の関数を呼ぶ*/
 }); // ここまで画面をスクロールをしたら動かしたい場合の記述

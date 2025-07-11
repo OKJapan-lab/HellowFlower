@@ -1,1 +1,62 @@
 @use "../global" as g;
+
+.p-footer {
+  border-top: solid 2px #ffffff;
+  padding-top: 60px;
+  @include g.mq(lg,xl,xxl) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.p-footer__inner {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.p-footer__info {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 19.2px; /* 160% */
+  display: inline-block;
+
+  p {
+  }
+  a {
+    display: block;
+  }
+}
+
+.p-footer__bottom {
+  margin-top: 30px;
+  @include g.mq(lg,xl,xxl) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.p-footer__sns {
+  font-size: 12px;
+  a {
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+  }
+}
+
+.p-footer__wrapper {
+  margin-top: 30px;
+  font-size: 12px;
+  display: flex;
+  @include g.mq(lg,xl,xxl) {
+    margin-top: 0;
+  }
+}
+
+.p-footer__policy {
+}
+
+.p-footer__copyright {
+  margin-left: 30px;
+}

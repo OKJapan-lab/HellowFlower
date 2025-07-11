@@ -18,7 +18,6 @@
   flex-direction: column;
   &.is-checked {
     .p-burger__bar {
-      background-color: #ffffff;
       &:nth-of-type(1) {
         top: 12.75px;
         transform: rotate(45deg);
@@ -40,7 +39,7 @@
   left: 0;
   width: 30px;
   height: 2px;
-  background-color: #121212;
+  background-color: #ffffff;
   transition: transform 0.3s linear, top 0.3s linear;
 
   &:nth-of-type(2) {

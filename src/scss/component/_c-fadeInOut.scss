@@ -2,6 +2,10 @@
   opacity: 0;
 }
 
+.js-fadeInTrigger {
+  opacity: 0;
+}
+
 .c-fadeIn {
   animation-name: fadeInAnime;
   animation-duration: 1s;
@@ -13,7 +17,6 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-
 
 @keyframes fadeInAnime {
   from {
