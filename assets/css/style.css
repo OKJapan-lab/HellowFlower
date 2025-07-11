@@ -114,8 +114,6 @@ a {
 }
 
 .l-burger {
-  opacity: 0;
-  transition: opacity 1s ease;
   position: fixed;
   top: 0;
   left: 0;
@@ -134,13 +132,9 @@ a {
 }
 
 .l-header {
-  display: none;
   position: fixed;
-  top: 0;
+  top: 10px;
   left: 0;
-  width: 100%;
-  height: 80px;
-  background-color: #fff;
   z-index: 40;
 }
 
@@ -278,29 +272,33 @@ a {
   transition: opacity 0.6s linear;
 }
 
-.js-fadeUpTrigger {
+.c-fadeUp__ini {
+  transition: transform 1s ease, opacity 1s ease;
   transform: translateY(100px);
   opacity: 0;
 }
 
 .c-fadeUp {
-  animation-name: fadeUpAnime;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
+  transform: translateY(0);
+  opacity: 1;
 }
 
-@keyframes fadeUpAnime {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.c-fadeInOut__ini {
+  opacity: 0;
+  transition: opacity 1s ease;
 }
-.c-opacity__1 {
+
+.c-fadeInOut__in {
   opacity: 1 !important;
+}
+
+.c-fadeIn__ini {
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+.c-fadeIn {
+  opacity: 1;
 }
 
 .c-button {
@@ -314,8 +312,8 @@ a {
 }
 
 .p-header {
-  width: 100%;
-  height: inherit;
+  width: 140px;
+  height: auto;
 }
 
 .p-header__logo {
@@ -323,7 +321,6 @@ a {
 }
 .p-header__logo a {
   display: inline-block;
-  width: 175px;
 }
 .p-burger {
   width: 100%;
@@ -554,8 +551,6 @@ a {
 }
 
 .p-access__background-img {
-  opacity: 0;
-  transition: opacity 1s ease;
   position: fixed;
   content: "";
   top: 0;

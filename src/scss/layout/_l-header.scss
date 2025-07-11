@@ -1,12 +1,8 @@
 @use "../global" as g;
 
 .l-header {
-  display: none;
   position: fixed;
-  top: 0;
+  top: 10px;
   left: 0;
-  width: 100%;
-  height: g.$header-height;
-  background-color: #fff;
   z-index: map-get(g.$df-layer, header);
 }

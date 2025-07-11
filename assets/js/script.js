@@ -126,9 +126,9 @@ function fadeInAnime() {
     //fadeInTriggerというクラス名が
     var scroll = jQuery(window).scrollTop();
     if (scroll >= 500) {
-      jQuery(this).addClass("c-opacity__1");
+      jQuery(this).addClass("c-fadeIn");
     } else {
-      jQuery(this).removeClass("c-opacity__1");
+      jQuery(this).removeClass("c-fadeIn");
     }
   });
 }
@@ -139,7 +139,7 @@ jQuery(window).scroll(function () {
 }); // ここまで画面をスクロールをしたら動かしたい場合の記述
 
 function fadeInOutAnime2() {
-  jQuery(".js-fadeInOutTrigger2").each(function () {
+  jQuery(".js-fadeInOutTrigger").each(function () {
     var $this = jQuery(this);
     var elemTop = $this.offset().top;
     var elemBottom = elemTop + $this.outerHeight();
@@ -149,10 +149,10 @@ function fadeInOutAnime2() {
     // elemBottom - xxx早くフェードアウト
     if (elemBottom - 600 > scroll && elemTop + 200 < windowBottom) {
       // 要素が画面内にあるとき
-      jQuery(".p-access__background-img").addClass("c-opacity__1");
+      jQuery(".p-access__background-img").addClass("c-fadeInOut__in");
     } else {
       // 上にも下にも画面外にあるとき
-      jQuery(".p-access__background-img").removeClass("c-opacity__1");
+      jQuery(".p-access__background-img").removeClass("c-fadeInOut__in");
     }
   });
 }

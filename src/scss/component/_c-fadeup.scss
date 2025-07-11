@@ -1,22 +1,10 @@
-.js-fadeUpTrigger {
+.c-fadeUp__ini {
+  transition: transform 1s ease, opacity 1s ease;
   transform: translateY(100px);
   opacity: 0;
 }
 
 .c-fadeUp {
-  animation-name: fadeUpAnime;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeUpAnime {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  transform: translateY(0);
+  opacity: 1;
 }
