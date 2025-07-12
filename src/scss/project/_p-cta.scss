@@ -1,0 +1,28 @@
+@use "../global" as g;
+
+.p-cta {
+}
+
+.p-cta__inner {
+  display: flex;
+  flex-direction: column;
+  button {
+    display: flex;
+    &:first-child{
+        border: solid 1px #ffffff;
+    }
+    &:last-child{
+        border-left: solid 1px #ffffff;
+        border-right: solid 1px #ffffff;
+        border-bottom: solid 1px #ffffff;
+    }
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 150px;
+      color: #ffffff;
+      writing-mode: sideways-lr;
+      line-height: 40px;
+    }
+  }
+}

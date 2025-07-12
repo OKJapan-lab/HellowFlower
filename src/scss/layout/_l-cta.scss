@@ -1,0 +1,12 @@
+@use "../global" as g;
+
+.l-cta {
+  @include g.mq(lg, xl, xxl) {
+    content: "";
+    position: fixed;
+    top: 50%;
+    transform: translateY(-30%);
+    right: 0;
+    z-index: map-get(g.$df-layer, sidebutton);
+  }
+}

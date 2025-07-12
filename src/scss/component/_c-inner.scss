@@ -1,6 +1,6 @@
 @use "../global" as g;
 
-.c-inner__head-burger {
+.c-inner {
   margin-left: 16px;
   margin-right: 16px;
   @include g.mq(lg, xl, xxl) {

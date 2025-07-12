@@ -1,15 +1,16 @@
 @use "../global" as g;
 
 .p-header {
-  width: 140px;
-  height: auto;
+  width: 100%;
+  height: inherit;
 }
 
 .p-header__inner {
 }
 
 .p-header__logo {
-  margin-top: 20px;
+  margin-top: 27px;
+  width: 140px;
   a {
     display: inline-block;
     img {

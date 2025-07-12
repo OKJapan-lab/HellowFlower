@@ -1,0 +1,10 @@
+.c-fadeCta__ini {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translate(100%, -30%);
+  opacity: 0;
+}
+
+.c-fadeCta {
+  transform: translate(0, -30%);
+  opacity: 1;
+}

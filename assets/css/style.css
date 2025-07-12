@@ -118,7 +118,6 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
   z-index: 50;
 }
 
@@ -133,8 +132,9 @@ a {
 
 .l-header {
   position: fixed;
-  top: 10px;
+  top: 0px;
   left: 0;
+  width: 100%;
   z-index: 40;
 }
 
@@ -148,23 +148,34 @@ a {
   z-index: 5;
 }
 
-.c-inner__head-burger {
+@media screen and (max-width: 1220px) and (min-width: calc(899px + 1px)), screen and (max-width: 1440px) and (min-width: calc(1220px + 1px)), screen and (min-width: 1441px) {
+  .l-cta {
+    content: "";
+    position: fixed;
+    top: 50%;
+    transform: translateY(-30%);
+    right: 0;
+    z-index: 25;
+  }
+}
+
+.c-inner {
   margin-left: 16px;
   margin-right: 16px;
 }
 @media screen and (max-width: 1220px) and (min-width: calc(899px + 1px)), screen and (max-width: 1440px) and (min-width: calc(1220px + 1px)), screen and (min-width: 1441px) {
-  .c-inner__head-burger {
+  .c-inner {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (max-width: 1220px) and (min-width: calc(899px + 1px)), screen and (max-width: 1440px) and (min-width: calc(1220px + 1px)) {
-  .c-inner__head-burger {
+  .c-inner {
     width: 83.8306731437vw;
   }
 }
 @media screen and (min-width: 1441px) {
-  .c-inner__head-burger {
+  .c-inner {
     width: 1208px;
   }
 }
@@ -293,11 +304,22 @@ a {
 }
 
 .c-fadeIn__ini {
-  transition: transform 1s ease, opacity 1s ease;
+  transition: opacity 1s ease;
   opacity: 0;
 }
 
 .c-fadeIn {
+  opacity: 1;
+}
+
+.c-fadeCta__ini {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translate(100%, -30%);
+  opacity: 0;
+}
+
+.c-fadeCta {
+  transform: translate(0, -30%);
   opacity: 1;
 }
 
@@ -312,12 +334,13 @@ a {
 }
 
 .p-header {
-  width: 140px;
-  height: auto;
+  width: 100%;
+  height: inherit;
 }
 
 .p-header__logo {
-  margin-top: 20px;
+  margin-top: 27px;
+  width: 140px;
 }
 .p-header__logo a {
   display: inline-block;
@@ -632,11 +655,6 @@ a {
   }
 }
 
-.p-footer__inner {
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
 .p-footer__info {
   font-size: 12px;
   font-weight: 300;
@@ -678,4 +696,28 @@ a {
 
 .p-footer__copyright {
   margin-left: 30px;
+}
+
+.p-cta__inner {
+  display: flex;
+  flex-direction: column;
+}
+.p-cta__inner button {
+  display: flex;
+}
+.p-cta__inner button:first-child {
+  border: solid 1px #ffffff;
+}
+.p-cta__inner button:last-child {
+  border-left: solid 1px #ffffff;
+  border-right: solid 1px #ffffff;
+  border-bottom: solid 1px #ffffff;
+}
+.p-cta__inner button a {
+  display: inline-block;
+  width: 40px;
+  height: 150px;
+  color: #ffffff;
+  writing-mode: sideways-lr;
+  line-height: 40px;
 }/*# sourceMappingURL=style.css.map */
