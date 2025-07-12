@@ -3,11 +3,10 @@
 .p-access {
   position: relative;
   margin-top: -100px;
-  padding-top: 180px;
+  padding-top: 40px;
   padding-bottom: 180px;
 
   @include g.mq(lg, xl, xxl) {
-    padding-top: 300px;
     padding-bottom: 300px;
   }
 }

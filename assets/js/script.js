@@ -120,7 +120,6 @@ jQuery(window).scroll(function () {
   fadeUpAnime(); /* アニメーション用の関数を呼ぶ*/
 }); // ここまで画面をスクロールをしたら動かしたい場合の記述
 
-
 function fadeInAnime() {
   jQuery(".js-fadeInTrigger").each(function () {
     //fadeInTriggerというクラス名が

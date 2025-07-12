@@ -1,7 +1,9 @@
 @use "../global" as g;
 
 .l-cta {
+  display: none;
   @include g.mq(lg, xl, xxl) {
+    display: block;
     content: "";
     position: fixed;
     top: 50%;

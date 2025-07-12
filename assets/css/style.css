@@ -118,7 +118,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 60;
 }
 
 .l-drawer-content {
@@ -127,7 +127,7 @@ a {
   right: 0;
   height: 0;
   width: 0;
-  z-index: 60;
+  z-index: 50;
 }
 
 .l-header {
@@ -138,18 +138,33 @@ a {
   z-index: 40;
 }
 
+.l-gallery {
+  padding-top: 40px;
+}
+
 .l-access {
+  padding-top: 140px;
   position: relative;
   z-index: 3;
+}
+@media screen and (max-width: 1220px) and (min-width: calc(899px + 1px)), screen and (max-width: 1440px) and (min-width: calc(1220px + 1px)), screen and (min-width: 1441px) {
+  .l-access {
+    padding-top: 260px;
+  }
 }
 
 .l-contact {
   position: relative;
+  padding-top: 60px;
   z-index: 5;
 }
 
+.l-cta {
+  display: none;
+}
 @media screen and (max-width: 1220px) and (min-width: calc(899px + 1px)), screen and (max-width: 1440px) and (min-width: calc(1220px + 1px)), screen and (min-width: 1441px) {
   .l-cta {
+    display: block;
     content: "";
     position: fixed;
     top: 50%;
@@ -387,6 +402,59 @@ a {
   top: 22px;
 }
 
+.p-drawer-content {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  transform: translateX(100%);
+  transition: transform 0.3s linear;
+}
+.p-drawer-content.is-checked {
+  transform: translateX(0);
+}
+
+.p-drawer-content__nav {
+  padding: 60px 25px;
+}
+
+.p-drawer-content__logo {
+  width: 80%;
+}
+
+.p-drawer-content__nav-list {
+  margin-top: 20px;
+}
+
+.p-drawer-content__nav-item {
+  border-top: 1px solid #ffffff;
+}
+.p-drawer-content__nav-item:last-child {
+  border-bottom: 1px solid #ffffff;
+}
+.p-drawer-content__nav-item a {
+  display: block;
+  margin: 20px 0;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 24.5px; /* 170.139% */
+}
+
+.p-drawer-content__sns {
+  margin-top: 65px;
+}
+.p-drawer-content__sns a {
+  display: block;
+  color: #fff;
+  font-weight: 300;
+  line-height: 24.5px; /* 170.139% */
+}
+.p-drawer-content__sns a:not(:first-child) {
+  margin-top: 10px;
+}
+
 .p-firstview__container {
   overflow: hidden;
   height: 600px;
@@ -494,7 +562,7 @@ a {
 }
 
 .p-gallery {
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .p-gallery__inner {
@@ -526,12 +594,11 @@ a {
 .p-access {
   position: relative;
   margin-top: -100px;
-  padding-top: 180px;
+  padding-top: 40px;
   padding-bottom: 180px;
 }
 @media screen and (max-width: 1220px) and (min-width: calc(899px + 1px)), screen and (max-width: 1440px) and (min-width: calc(1220px + 1px)), screen and (min-width: 1441px) {
   .p-access {
-    padding-top: 300px;
     padding-bottom: 300px;
   }
 }
@@ -588,7 +655,7 @@ a {
 }
 
 .p-contact {
-  padding-top: 100px;
+  padding-top: 40px;
   padding-bottom: 200px;
 }
 

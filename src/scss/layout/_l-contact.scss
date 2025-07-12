@@ -1,5 +1,6 @@
 @use "../global" as g;
 .l-contact {
     position: relative;
+    padding-top: 60px;
     z-index: map-get(g.$df-layer, contact);
 }

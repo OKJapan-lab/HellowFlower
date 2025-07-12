@@ -1,5 +1,9 @@
 @use "../global" as g;
 .l-access {
+    padding-top: 140px;
     position: relative;
     z-index: map-get(g.$df-layer, access);
+    @include g.mq(lg,xl,xxl) {
+        padding-top: 260px;
+    }
 }
